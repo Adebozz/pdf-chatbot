@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
   const pineconeClient = new PineconeClient();
   await pineconeClient.init({
     apiKey: process.env.PINECONE_API_KEY ?? "",
-    environment: "us-east-1-aws",
+    environment: "gcp-starter",
   });
   const pineconeIndex = pineconeClient.Index(
     process.env.PINECONE_INDEX_NAME as string
